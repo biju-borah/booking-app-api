@@ -47,6 +47,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend deployed")
+})
+
 app.listen(port, () => {
   connect();
   console.log('Connected to backend.');
