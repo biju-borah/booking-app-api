@@ -1,6 +1,7 @@
 import servers from "./servers.js";
 import tags from "./tags.js";
 import getAll from "./endpoints/getAllHotels.js";
+import findHotel from "./endpoints/findHotel.js";
 
 const docs = {
     openapi: "3.0.3", // present supported openapi version
@@ -21,6 +22,9 @@ const docs = {
         '/hotels': {
             ...getAll,
         },
+        '/hotels/find/{id}': {
+            ...findHotel
+        }
     }
 };
 
