@@ -3,7 +3,8 @@ import tags from "./tags.js";
 import getAll from "./endpoints/getAllHotels.js";
 import findHotel from "./endpoints/findHotel.js";
 import getCount from "./endpoints/getCount.js";
-
+import countByType from "./endpoints/countByType.js";
+import getRoom from "./endpoints/getRoom.js";
 
 const docs = {
     openapi: "3.0.3", // present supported openapi version
@@ -29,7 +30,14 @@ const docs = {
         },
         '/hotels/countByCity': {
             ...getCount
+        },
+        '/hotels/countByType': {
+            ...countByType
+        },
+        '/hotels/room/{id}': {
+            ...getRoom
         }
+
     }
 };
 
