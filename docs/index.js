@@ -5,6 +5,8 @@ import findHotel from "./endpoints/findHotel.js";
 import getCount from "./endpoints/getCount.js";
 import countByType from "./endpoints/countByType.js";
 import getRoom from "./endpoints/getRoom.js";
+import getAllRooms from "./endpoints/getAllRooms.js";
+import getRoomById from "./endpoints/getRoomById.js";
 
 const docs = {
     openapi: "3.0.3", // present supported openapi version
@@ -37,6 +39,13 @@ const docs = {
         '/hotels/room/{id}': {
             ...getRoom
         },
+        '/rooms/': {
+            ...getAllRooms
+        },
+        '/rooms/{id}': {
+            ...getRoomById
+        }
+
 
     }
 };
