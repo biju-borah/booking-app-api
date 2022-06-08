@@ -14,7 +14,7 @@ const getAll = {
                     example: ''
                 },
                 required: false, // Mandatory param
-                description: "whether to get featured hotels or not", // param desc.
+                description: "Fetch featured hotels", // param desc.
             },
             {
                 name: "limit", // name of the param
