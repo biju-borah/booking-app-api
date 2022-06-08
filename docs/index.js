@@ -36,7 +36,7 @@ const docs = {
         },
         '/hotels/room/{id}': {
             ...getRoom
-        }
+        },
 
     }
 };

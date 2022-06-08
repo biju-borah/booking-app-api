@@ -16,6 +16,50 @@ const getAll = {
                 required: false, // Mandatory param
                 description: "whether to get featured hotels or not", // param desc.
             },
+            {
+                name: "limit", // name of the param
+                in: "query", // location of the param
+                schema: {
+                    type: "integer",
+                    description: "limit",
+                    example: ''
+                },
+                required: false, // Mandatory param
+                description: "no of hotels to be displayed", // param desc.
+            },
+            {
+                name: "city", // name of the param
+                in: "query", // location of the param
+                schema: {
+                    type: "string",
+                    description: "destination",
+                    example: ''
+                },
+                required: false, // Mandatory param
+                description: "list of hotels available in the destination", // param desc.
+            },
+            {
+                name: "min", // name of the param
+                in: "query", // location of the param
+                schema: {
+                    type: "integer",
+                    description: "price",
+                    example: ''
+                },
+                required: false, // Mandatory param
+                description: "minimum price", // param desc.
+            },
+            {
+                name: "max", // name of the param
+                in: "query", // location of the param
+                schema: {
+                    type: "integer",
+                    description: "price",
+                    example: ''
+                },
+                required: false, // Mandatory param
+                description: "maximum price", // param desc.
+            },
         ],
         // expected responses
         responses: {
