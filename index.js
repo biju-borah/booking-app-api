@@ -52,7 +52,7 @@ app.use((err, req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Backend deployed")
+  res.redirect("/api/docs")
 })
 
 app.listen(port, () => {
