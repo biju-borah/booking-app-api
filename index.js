@@ -5,11 +5,17 @@ import authRoute from './routes/auth.js';
 import usersRoute from './routes/users.js';
 import hotelsRoute from './routes/hotels.js';
 import roomsRoute from './routes/rooms.js';
+import docs from './docs/index.js'
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import swaggerUiExpress from 'swagger-ui-express';
 
 const app = express();
 dotenv.config();
+
+const port = process.env.PORT || 8800
+
+app.use('/api/docs', swaggerUiExpress.serve, swaggerUiExpress.setup(docs));
 
 const connect = async () => {
   try {
@@ -44,6 +50,11 @@ app.use((err, req, res, next) => {
     stack: err.stack,
   });
 });
+
+app.get("/", (req, res) => {
+  res.redirect("/api/docs")
+})
+
 const port = process.env.PORT || 8800;
 app.listen(port, () => {
   connect();
