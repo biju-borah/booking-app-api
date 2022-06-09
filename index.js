@@ -55,6 +55,7 @@ app.get("/", (req, res) => {
   res.redirect("/api/docs")
 })
 
+const port = process.env.PORT || 8800;
 app.listen(port, () => {
   connect();
   console.log('Connected to backend.');
