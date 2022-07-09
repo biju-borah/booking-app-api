@@ -13,8 +13,6 @@ import swaggerUiExpress from 'swagger-ui-express';
 const app = express();
 dotenv.config();
 
-const port = process.env.PORT || 8800
-
 app.use('/api/docs', swaggerUiExpress.serve, swaggerUiExpress.setup(docs));
 
 const connect = async () => {
