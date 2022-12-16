@@ -1,7 +1,7 @@
 const servers = {
     servers: [
         {
-            url: "https://bookingssss.herokuapp.com/api", // url
+            url: "https://booking-app-api-64r3.onrender.com/api", // url
             description: "Deployed server", // name
         },
         {
